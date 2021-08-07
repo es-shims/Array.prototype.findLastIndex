@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.0](https://github.com/es-shims/Array.prototype.findLastIndex/compare/v1.0.0...v1.1.0) - 2021-08-07
+
+### Commits
+
+- [New] add ESM entry points [`ac5ada3`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/ac5ada3d359ff267e6933dd817f4106e6de2c157)
+- [Fix] ES3 engines: ensure nullish receiver throws [`4c6592a`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/4c6592a7962351e82bb1b06c79de496bf4bcd08d)
+- [Dev Deps] update `eslint`, `@tape` [`6895166`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/6895166742a738a80d19ac4eaa6f12c97a5c7814)
+- [Fix] add missing entry points to `exports` [`ac2f138`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/ac2f1384dcd9a9f736ce1c3c5dc7ac87e16c4f90)
+- [Deps] update `es-abstract` [`c379fb7`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/c379fb7681ea3bb078891bf394756b1086bc43e7)
+
 ## v1.0.0 - 2021-07-13
 
 ### Commits
