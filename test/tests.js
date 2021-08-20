@@ -28,6 +28,16 @@ var getTestArr = function () {
 };
 
 module.exports = function (findLastIndex, t) {
+	forEach(v.nonArrays, function (nonArray) {
+		if (nonArray != null) { // eslint-disable-line eqeqeq
+			t.equal(
+				findLastIndex(nonArray, function () { return true; }),
+				typeof nonArray.length === 'number' ? nonArray.length - 1 : -1,
+				inspect(nonArray) + ' is not an array'
+			);
+		}
+	});
+
 	t.test('throws on a non-callable predicate', function (st) {
 		forEach(v.nonFunctions, function (nonFunction) {
 			st['throws'](
@@ -109,6 +119,11 @@ module.exports = function (findLastIndex, t) {
 		st.equal(findLastIndex([], trueThunk), -1, 'true thunk callback yields -1');
 		st.equal(findLastIndex([], falseThunk), -1, 'false thunk callback yields -1');
 
+		var counter = 0;
+		var callback = function () { counter += 1; };
+		findLastIndex([], callback);
+		st.equal(counter, 0, 'counter is not incremented');
+
 		st.end();
 	});
 
@@ -178,6 +193,37 @@ module.exports = function (findLastIndex, t) {
 			st.equal(Object.prototype.toString.call(list), '[object String]', 'boxed list arg is a String');
 			return true;
 		});
+
+		st.end();
+	});
+
+	t.test('array altered during loop', function (st) {
+		var arr = ['Shoes', 'Car', 'Bike'];
+		var results = [];
+
+		findLastIndex(arr, function (kValue) {
+			if (results.length === 0) {
+				arr.splice(1, 1);
+			}
+			results.push(kValue);
+		});
+
+		st.equal(results.length, 3, 'predicate called three times');
+		st.deepEqual(results, ['Bike', 'Bike', 'Shoes']);
+
+		results = [];
+		arr = ['Skateboard', 'Barefoot'];
+		findLastIndex(arr, function (kValue) {
+			if (results.length === 0) {
+				arr.push('Motorcycle');
+				arr[0] = 'Magic Carpet';
+			}
+
+			results.push(kValue);
+		});
+
+		st.equal(results.length, 2, 'predicate called twice');
+		st.deepEqual(results, ['Barefoot', 'Magic Carpet']);
 
 		st.end();
 	});
