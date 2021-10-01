@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.1](https://github.com/es-shims/Array.prototype.findLastIndex/compare/v1.1.0...v1.1.1) - 2021-10-01
+
+### Commits
+
+- [Refactor] remove unnecessary ESM files [`35161c7`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/35161c76758835dd3fbecdf0b5fbf41a3ce9f218)
+- [Tests] add new tests from test262 [`e26fa25`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/e26fa256601f60b1feb5918e4fbcc76d0d773d13)
+- [Deps] update `es-abstract` [`5ff80b1`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/5ff80b116f2e083ae72605275af0efec367f3a89)
+- [readme] fix URLs [`b962fe2`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/b962fe225fac8a450624d861b5d6e444526bcf32)
+- [Dev Deps] update `@ljharb/eslint-config`, `@es-shims/api` [`5aa11dd`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/5aa11dd23ee2bcdc9ca7d2d6007e7f44a9356743)
+
 ## [v1.1.0](https://github.com/es-shims/Array.prototype.findLastIndex/compare/v1.0.0...v1.1.0) - 2021-08-07
 
 ### Commits
