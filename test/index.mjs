@@ -23,9 +23,9 @@ test('named exports', async (t) => {
 	);
 
 	const { shim, getPolyfill, implementation } = Module;
-	t.equal(await import('array.prototype.findlastindex/shim'), shim, 'shim named export matches deep export');
-	t.equal(await import('array.prototype.findlastindex/implementation'), implementation, 'implementation named export matches deep export');
-	t.equal(await import('array.prototype.findlastindex/polyfill'), getPolyfill, 'getPolyfill named export matches deep export');
+	t.equal((await import('array.prototype.findlastindex/shim')).default, shim, 'shim named export matches deep export');
+	t.equal((await import('array.prototype.findlastindex/implementation')).default, implementation, 'implementation named export matches deep export');
+	t.equal((await import('array.prototype.findlastindex/polyfill')).default, getPolyfill, 'getPolyfill named export matches deep export');
 
 	t.end();
 });
