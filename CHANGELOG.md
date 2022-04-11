@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.1](https://github.com/es-shims/Array.prototype.findLastIndex/compare/v1.2.0...v1.2.1) - 2022-04-11
+
+### Commits
+
+- [Refactor] use `es-shim-unscopables` [`abe84ee`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/abe84ee8794ce9c84180bc01cf499a7bb2494b3d)
+
 ## [v1.2.0](https://github.com/es-shims/Array.prototype.findLastIndex/compare/v1.1.1...v1.2.0) - 2022-04-11
 
 ### Commits
