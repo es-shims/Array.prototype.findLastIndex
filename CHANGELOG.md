@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0](https://github.com/es-shims/Array.prototype.findLastIndex/compare/v1.1.1...v1.2.0) - 2022-04-11
+
+### Commits
+
+- [actions] reuse common workflows [`670cc4c`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/670cc4c0b6f23b7f01d365a9afd2dd88ee2e4967)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `object-inspect`, `safe-publish-latest`, `tape` [`11bc460`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/11bc460ab842d2a08c43b67aab182e0697d65308)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `object-inspect`, `tape` [`b076ad6`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/b076ad6ed9246f3139efa72d0ddbf2e0d861f982)
+- [actions] update codecov uploader [`0d62d86`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/0d62d8602c2d3ecefdd0965c25cafb2a864c0903)
+- [New] `shim`/`auto`: add `findLast` to `Symbol.unscopables` [`b09e4a6`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/b09e4a6a194366b45945c6d65cdcc64ca786e570)
+- [Deps] update `es-abstract` [`024128c`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/024128c1abc5b58863859ea8b9cf4c1cb1df548b)
+- [Deps] update `es-abstract` [`2dcab99`](https://github.com/es-shims/Array.prototype.findLastIndex/commit/2dcab99e3ed43546cd6610b12d489d95d8e94d90)
+
 ## [v1.1.1](https://github.com/es-shims/Array.prototype.findLastIndex/compare/v1.1.0...v1.1.1) - 2021-10-01
 
 ### Commits
