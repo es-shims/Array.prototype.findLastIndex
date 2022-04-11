@@ -26,8 +26,8 @@ test('shimmed', function (t) {
 	var supportsStrictMode = (function () { return typeof this === 'undefined'; }());
 
 	t.test('bad array/this value', { skip: !supportsStrictMode }, function (st) {
-		st['throws'](function () { return Array.prototype.findLastIndex.call(undefined, 'a'); }, TypeError, 'undefined is not an object');
-		st['throws'](function () { return Array.prototype.findLastIndex.call(null, 'a'); }, TypeError, 'null is not an object');
+		st['throws'](function () { return Array.prototype.findLastIndex.call(undefined, function () {}); }, TypeError, 'undefined is not an object');
+		st['throws'](function () { return Array.prototype.findLastIndex.call(null, function () {}); }, TypeError, 'null is not an object');
 		st.end();
 	});
 
