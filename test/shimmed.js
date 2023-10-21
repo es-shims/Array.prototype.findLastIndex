@@ -5,7 +5,7 @@ var orig = Array.prototype.findLastIndex;
 require('../auto');
 
 var test = require('tape');
-var has = require('has');
+var hasOwn = require('hasown');
 var defineProperties = require('define-properties');
 var callBind = require('call-bind');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
@@ -36,7 +36,7 @@ test('shimmed', function (t) {
 	});
 
 	t.test('Symbol.unscopables', { skip: typeof Symbol !== 'function' || typeof Symbol.unscopables !== 'symbol' }, function (st) {
-		st.ok(has(Array.prototype[Symbol.unscopables], 'findLastIndex'), 'Array.prototype[Symbol.unscopables] has own `findLastIndex` property');
+		st.ok(hasOwn(Array.prototype[Symbol.unscopables], 'findLastIndex'), 'Array.prototype[Symbol.unscopables] has own `findLastIndex` property');
 		st.equal(Array.prototype[Symbol.unscopables].findLastIndex, true, 'Array.prototype[Symbol.unscopables].findLastIndex is true');
 		st.end();
 	});
