@@ -9,7 +9,8 @@ var hasOwn = require('hasown');
 var defineProperties = require('define-properties');
 var callBind = require('call-bind');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
-var functionsHaveNames = function f() {}.name === 'f';
+var supportsStrictMode = require('has-strict-mode')();
+var functionsHaveNames = require('functions-have-names')();
 
 var runTests = require('./tests');
 
@@ -26,8 +27,6 @@ test('shimmed', function (t) {
 		et.equal(false, isEnumerable.call(Array.prototype, 'findLastIndex'), 'Array#findLastIndex is not enumerable');
 		et.end();
 	});
-
-	var supportsStrictMode = (function () { return typeof this === 'undefined'; }());
 
 	t.test('bad array/this value', { skip: !supportsStrictMode }, function (st) {
 		st['throws'](function () { return Array.prototype.findLastIndex.call(undefined, function () {}); }, TypeError, 'undefined is not an object');
