@@ -36,7 +36,7 @@ assert.deepEqual(findLastIndex(arr, isNumber), 3);
 ```js
 var findLastIndex = require('array.prototype.findlastindex');
 var assert = require('assert');
-/* when Array#findLastIndex is not present */
+/* when Array#findLastIndex is present */
 delete Array.prototype.findLastIndex;
 var shimmed = findLastIndex.shim();
 
@@ -47,7 +47,7 @@ assert.deepEqual(arr.findLastIndex(isNumber), findLastIndex(arr, isNumber));
 ```js
 var findLastIndex = require('array.prototype.findlastindex');
 var assert = require('assert');
-/* when Array#findLastIndex is present */
+/* when Array#findLastIndex is not present */
 var shimmed = findLastIndex.shim();
 
 assert.equal(shimmed, Array.prototype.findLastIndex);
